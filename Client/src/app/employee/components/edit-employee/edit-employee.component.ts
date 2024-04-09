@@ -88,6 +88,7 @@ export class EditEmployeeComponent implements OnInit {
       identity: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(9)]],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
+      isActive: [''],
       maleOrFmale: ['', Validators.required],
       birthDate: [null, Validators.required],
       startDate: [null, Validators.required],
@@ -112,10 +113,10 @@ export class EditEmployeeComponent implements OnInit {
       identity: this.employee.id,
       firstName: this.employee.firstName,
       lastName: this.employee.lastName,
+      isActive:true,
       birthDate: this.employee.birthDate,
       startDate: this.employee.startDate,
       maleOrFmale: this.employee.gender === Gender.Male ? '1' : '0'
-
 
     });
 

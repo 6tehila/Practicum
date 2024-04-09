@@ -52,9 +52,14 @@
                 <input matInput formControlName="lastName" placeholder="Enter last name" type="text">
                 <mat-error *ngIf="this.employeeForm.get('lastName')?.hasError('required')">the field is
                   required!</mat-error>
-
               </mat-form-field>
 
+              <!-- <mat-label>IsActive</mat-label>
+
+              <mat-radio-group formControlName="isActive">
+                <mat-radio-button value="0">True</mat-radio-button>
+                <mat-radio-button value="1">False</mat-radio-button>
+              </mat-radio-group> -->
 
               <mat-action-row>
                 <button mat-button color="primary" (click)="nextStep()">

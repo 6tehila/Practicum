@@ -31,7 +31,7 @@ namespace Workers_management.Data.Repositories
             var employee = await GetByIdAsync(id);
             employee.IsActive = false;
             await _context.SaveChangesAsync();
-           
+
         }
 
         public async Task<Employee> GetByIdAsync(int id)
@@ -70,7 +70,9 @@ namespace Workers_management.Data.Repositories
                 updateEmp.StartDate = employee.StartDate;
                 updateEmp.BirthDate = employee.BirthDate;
                 updateEmp.IsActive = employee.IsActive;
-              
+                updateEmp.EmployeePositions = employee.EmployeePositions;
+                updateEmp.Gender = employee.Gender;
+               
                 await _context.SaveChangesAsync();
                 return updateEmp;
             }

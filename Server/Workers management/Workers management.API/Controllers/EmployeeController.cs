@@ -57,25 +57,11 @@ namespace Workers_management.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Employee employeeDto)
         {
-           
-
-            //ניסוי 
-            //var employee = await _employeeService.GetByIdAsync(id);
-            //if (employee == null)
-            //{
-            //    return NotFound();
-            //}
-            //_mapper.Map(employeeDto, employee);
-            //var employee2= await _employeeService.UpdateEmployeeAsync(id, employee);
-            //return Ok(_mapper.Map<EmployeeDto>(employee2));
-
-
             var empToUpdate = _mapper.Map<Employee>(employeeDto);
             var emp = await _employeeService.UpdateEmployeeAsync(id, empToUpdate);
             var newEmp = await _employeeService.GetByIdAsync(emp.Id);
             var empDTO = _mapper.Map<EmployeeDto>(newEmp);
             return Ok(empDTO);
-
         }
 
         // DELETE api/<EmployeeController>/5

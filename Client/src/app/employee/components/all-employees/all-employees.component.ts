@@ -32,7 +32,9 @@ export class AllEmployeesComponent implements OnInit {
     this.employeeService.getEmployeeList().subscribe({
       next: (res) => {
          const activeEmployees = res.filter(employee => employee.isActive);
-        this.employeesList = new MatTableDataSource<Employee>(res); 
+        // this.employeesList = new MatTableDataSource<Employee>(res); //all employees
+        this.employeesList = new MatTableDataSource<Employee>(activeEmployees);
+
         console.log("res",res);
         console.log("active employees", activeEmployees);
       },
@@ -61,8 +63,6 @@ export class AllEmployeesComponent implements OnInit {
     this.router.navigate(['/edit-employee', employee.id]);
   } 
   
-
-
 
   downloadEmployeesList(): void {
     this.employeeService.getEmployeeList().subscribe({
