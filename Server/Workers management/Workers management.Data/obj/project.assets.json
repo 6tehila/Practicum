@@ -2069,11 +2069,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\AAפרקטיקוםםםםםם\\Workers management\\Workers management.Data\\Workers management.Data.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\פרקטיקום\\Server\\Workers management\\Workers management.Data\\Workers management.Data.csproj",
       "projectName": "Workers management.Data",
-      "projectPath": "C:\\Users\\User\\Documents\\AAפרקטיקוםםםםםם\\Workers management\\Workers management.Data\\Workers management.Data.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\פרקטיקום\\Server\\Workers management\\Workers management.Data\\Workers management.Data.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\AAפרקטיקוםםםםםם\\Workers management\\Workers management.Data\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\פרקטיקום\\Server\\Workers management\\Workers management.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2094,8 +2094,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\AAפרקטיקוםםםםםם\\Workers management\\Workers management.Core\\Workers management.Core.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\AAפרקטיקוםםםםםם\\Workers management\\Workers management.Core\\Workers management.Core.csproj"
+            "C:\\Users\\User\\Documents\\פרקטיקום\\Server\\Workers management\\Workers management.Core\\Workers management.Core.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\פרקטיקום\\Server\\Workers management\\Workers management.Core\\Workers management.Core.csproj"
             }
           }
         }

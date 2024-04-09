@@ -132,11 +132,6 @@ export class AddEmployeeComponent implements OnInit {
   }
   submit() {
     if (!this.submitForm()) {
-      // this.dialog.open(ErrorDialogAddEmployeeComponent, {
-      //   data: {
-      //     errors: this.validationErrors,
-      //   },
-      // });
       console.log("Validation errors:", this.validationErrors);
     }
   }
@@ -220,10 +215,12 @@ export class AddEmployeeComponent implements OnInit {
 
     this.employee.roles = this.employeeRoleResult;
 
-    this.employee.gender = Gender.Male
-    if (this.employeeForm.get('maleOrFmale')?.value == "0") {
-      this.employee.gender =Gender.Female
-    }
+    // this.employee.gender = Gender.Male
+    // if (this.employeeForm.get('maleOrFmale')?.value == "0") {
+    //   this.employee.gender =Gender.Female
+    // }
+    this.employeeForm.patchValue({ maleOrFmale: this.employee.gender === Gender.Female ? '0' : '1' });
+
     console.log("employee before send", this.employee)
     this._employeeService.addEmployee(this.employee).subscribe({
       next: (res) => {
@@ -232,6 +229,7 @@ export class AddEmployeeComponent implements OnInit {
         this.router.navigate(["all-employees"]);
 
       },
+     
       error: (err) => {
         console.error(err)
        

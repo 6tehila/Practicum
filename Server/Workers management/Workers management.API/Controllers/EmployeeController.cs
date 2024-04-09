@@ -46,7 +46,7 @@ namespace Workers_management.API.Controllers
 
         // POST api/<EmployeeController>
         [HttpPost]
-        public async Task<ActionResult<EmployeeDto>> Post(int id,[FromBody] Employee employee)
+        public async Task<ActionResult<EmployeeDto>> Post([FromBody] Employee employee)
         {
             var newEmp = await _employeeService.AddEmployeeAsync(employee);
             var newEmpDto = _mapper.Map<EmployeeDto>(newEmp);
@@ -57,16 +57,7 @@ namespace Workers_management.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Employee employeeDto)
         {
-            //var employee = _mapper.Map<Employee>(employeeDto);
-            //var updatedEmployee = await _employeeService.UpdateEmployeeAsync(id, employee);
-
-            //if (updatedEmployee == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //var updatedEmployeeDto = _mapper.Map<EmployeeDto>(updatedEmployee);
-            //return Ok(updatedEmployeeDto);
+           
 
             //ניסוי 
             //var employee = await _employeeService.GetByIdAsync(id);

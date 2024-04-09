@@ -277,7 +277,8 @@ export class EditEmployeeComponent implements OnInit {
 
     console.log("employee roles: ", this.employee.roles);
 
-    this.employee.gender = this.employeeForm.get('maleOrFmale')?.value === "0" ? Gender.Female : Gender.Male;
+    //  this.employee.gender = this.employeeForm.get('maleOrFmale')?.value === "0" ? Gender.Female : Gender.Male;
+    this.employeeForm.patchValue({ maleOrFmale: this.employee.gender === Gender.Female ? '0' : '1' });
 
     console.log("employee before send", this.employee);
 
